@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wpisz Imię/Ksywkę</title>
+    <title>Ocena RPE</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,23 +18,34 @@
             text-align: center;
         }
         #form-container {
-            background: #111;
+            width: 90%;
+            max-width: 800px;
             padding: 30px;
+            background: #111; /* Ciemne tło */
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 165, 0, 0.7); /* Jasno pomarańczowy cień */
+            box-shadow: 0 0 20px rgba(255, 165, 0, 0.7); /* Pomarańczowy cień */
         }
-        input[type="text"] {
-            padding: 10px;
-            width: 100%;
-            max-width: 300px;
+        h1 {
+            color: #ffa500; /* Pomarańczowy nagłówek */
             margin-bottom: 20px;
-            border: 1px solid #444;
-            border-radius: 5px;
-            background: #222;
-            color: #fff;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .radio-group label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+        input[type="radio"] {
+            accent-color: #ffa500; /* Pomarańczowy kolor zaznaczenia */
+            margin-top: 10px;
         }
         input[type="submit"] {
-            background-color: #ffa500; /* Jasno pomarańczowy przycisk */
+            background-color: #ffa500; /* Pomarańczowy przycisk */
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -50,10 +61,59 @@
 <body>
 
 <div id="form-container">
-    <h1>Wpisz swoje imię/ksywkę</h1>
-    <form id="nameForm" action="form.html">
-        <input type="text" id="name" name="name" placeholder="Twoje imię/ksywka" required>
-        <input type="submit" value="Przejdź do formularza">
+    <h1>Ocena RPE</h1>
+    <form id="rpeForm" method="POST" action="https://script.google.com/macros/s/AKfycbymF3hO1bAiUIlIslYjfSrA3iqm5A3iS8jU_WtNqZ_R0V9TACr1kO3p65df-3nXzf7nlg/exec">
+        <!-- Pole do wpisania imienia/ksywki -->
+        <p>Podaj swoje imię/ksywkę:</p>
+        <input type="text" name="name" placeholder="Twoje imię/ksywka" required>
+
+        <!-- Opcje RPE -->
+        <p>Jak się czujesz dzisiaj?</p>
+        <div class="radio-group">
+            <label>
+                <span>1</span>
+                <input type="radio" name="rpe" value="1" required>
+            </label>
+            <label>
+                <span>2</span>
+                <input type="radio" name="rpe" value="2">
+            </label>
+            <label>
+                <span>3</span>
+                <input type="radio" name="rpe" value="3">
+            </label>
+            <label>
+                <span>4</span>
+                <input type="radio" name="rpe" value="4">
+            </label>
+            <label>
+                <span>5</span>
+                <input type="radio" name="rpe" value="5">
+            </label>
+            <label>
+                <span>6</span>
+                <input type="radio" name="rpe" value="6">
+            </label>
+            <label>
+                <span>7</span>
+                <input type="radio" name="rpe" value="7">
+            </label>
+            <label>
+                <span>8</span>
+                <input type="radio" name="rpe" value="8">
+            </label>
+            <label>
+                <span>9</span>
+                <input type="radio" name="rpe" value="9">
+            </label>
+            <label>
+                <span>10</span>
+                <input type="radio" name="rpe" value="10">
+            </label>
+        </div>
+
+        <!-- Przycisk wysyłania -->
+        <input type="submit" value="Zatwierdź">
     </form>
 </div>
 
