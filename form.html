@@ -62,8 +62,9 @@
 
 <div id="form-container">
     <h1>Ocena RPE</h1>
-    <form id="rpeForm" action="thankyou.html" method="post"> <!-- Wprowadź ścieżkę do strony "thankyou.html" lub innej strony -->
-        <p>Jak się czujesz dzisiaj?</p>
+    <form id="rpeForm" method="POST" action="https://script.google.com/macros/s/AKfycbzxP9SsMoIP4Ds26rHYRk7ONm62Ag_4m4OmE6svTv5MfkX5OZANG5FoZ7Jdsnb5jle_yw/exec"> <!-- Tutaj wstaw URL Web App z Google Apps Script -->
+        <p>Jak się czujesz po treningu?</p>
+        <input type="text" name="name" placeholder="Twoje imię/ksywka" required>
         <div class="radio-group">
             <!-- Opcje RPE od 1 do 10 -->
             <label>
