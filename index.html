@@ -1,97 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularz Samopoczucia</title>
+    <title>Wpisz Imię/Ksywkę</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Tło strony - czarne */
-            color: #fff; /* Tekst - biały */
+            background-color: #000; /* Czarne tło */
+            color: #fff; /* Biały tekst */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            text-align: center;
         }
         #form-container {
-            width: 80%;
-            max-width: 800px;
-            margin: 20px;
-            padding: 20px;
-            background: #111; /* Tło formularza - ciemniejszy czarny */
+            background: #111;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 15px rgba(255, 165, 0, 0.7); /* Jasno pomarańczowy cień */
         }
-        h1 {
-            text-align: center;
-            color: #fff;
-        }
-        iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-        }
-        .form-control {
-            border: 1px solid #444; /* Kolor linii wokół opcji */
-            margin-bottom: 15px;
-        }
-        .form-control:hover {
-            border-color: #ff0; /* Kolor linii przy najechaniu - żółty */
-        }
-        .form-control input[type="radio"] {
-            accent-color: #ff0; /* Kolor zaznaczenia przy opcji - żółty */
-        }
-        .form-control select {
-            color: #fff;
-            background-color: #222;
-            border: 1px solid #444;
-        }
-        .form-control select:focus {
-            border-color: #ff0;
-        }
-        .form-control option {
-            background-color: #222;
-            color: #fff;
-        }
-        #logo {
-            display: block;
-            margin: 0 auto 20px;
-            max-width: 200px; /* Maksymalna szerokość logo */
-        }
-        .input-container {
-            margin-bottom: 20px;
-        }
-        .input-container label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .input-container input {
-            width: 100%;
+        input[type="text"] {
             padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
             border: 1px solid #444;
+            border-radius: 5px;
             background: #222;
             color: #fff;
-            border-radius: 5px;
         }
-        .input-container input:focus {
-            border-color: #ff0;
+        input[type="submit"] {
+            background-color: #ffa500; /* Jasno pomarańczowy przycisk */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff8c00;
         }
     </style>
 </head>
 <body>
-    <div id="form-container">
-        <img id="logo" src="/Users/mmgogolek/Documents/Aplikacja wellness/" alt="Logo"> <!-- Zamień path/to/your/logo.png na ścieżkę do logo na Twoim komputerze -->
-        <h1>Formularz Samopoczucia</h1>
-        <form id="name-form" action="iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebaoqC9w58NC0Fl3IIAjvEFBNodrjG5adEO8tS5l57nb5i2w/viewform?embedded=true" method="get" target="_blank"><form id="name-form" action="https://docs.google.com/forms/d/e/1FAIpQLScE3gGz9dMvJQ1A1gK9Gf1Wl5fQuzE8Ez8nB_DaHNsA2Mk8Tg/viewform?embedded=true" method="get" target="_blank">
-            <div class="input-container">
-                <label for="name">Wpisz swoje imię:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <button type="submit">Przejdź do formularza</button>
-        </form>
-    </div>
+
+<div id="form-container">
+    <h1>Wpisz swoje imię/ksywkę</h1>
+    <form id="nameForm" action="form.html">
+        <input type="text" id="name" name="name" placeholder="Twoje imię/ksywka" required>
+        <input type="submit" value="Przejdź do formularza">
+    </form>
+</div>
+
 </body>
 </html>
