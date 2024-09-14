@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularz Samopoczucia RPE</title>
+    <title>Ocena RPE</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,28 +25,90 @@
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(255, 165, 0, 0.7); /* Pomarańczowy cień */
         }
-        iframe {
-            width: 100%;
-            height: 700px;
-            border: none;
-            background-color: transparent;
+        h1 {
+            color: #ffa500; /* Pomarańczowy nagłówek */
+            margin-bottom: 20px;
         }
-        /* Stylizowanie elementów formularza */
-        select, input[type="radio"], input[type="checkbox"] {
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .radio-group label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+        input[type="radio"] {
             accent-color: #ffa500; /* Pomarańczowy kolor zaznaczenia */
-            background-color: #222; /* Tło opcji */
-            color: #fff;
+            margin-top: 10px;
         }
-        label {
+        input[type="submit"] {
+            background-color: #ffa500; /* Pomarańczowy przycisk */
             color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff8c00;
         }
     </style>
 </head>
 <body>
 
 <div id="form-container">
-    <h1>Formularz Samopoczucia RPE</h1>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebaoqC9w58NC0Fl3IIAjvEFBNodrjG5adEO8tS5l57nb5i2w/viewform?embedded=true" width="640" height="605" frameborder="0" marginheight="0" marginwidth="0">
+    <h1>Ocena RPE</h1>
+    <form id="rpeForm" action="thankyou.html" method="post"> <!-- Wprowadź ścieżkę do strony "thankyou.html" lub innej strony -->
+        <p>Jak się czujesz dzisiaj?</p>
+        <div class="radio-group">
+            <!-- Opcje RPE od 1 do 10 -->
+            <label>
+                <span>1</span>
+                <input type="radio" name="rpe" value="1" required>
+            </label>
+            <label>
+                <span>2</span>
+                <input type="radio" name="rpe" value="2">
+            </label>
+            <label>
+                <span>3</span>
+                <input type="radio" name="rpe" value="3">
+            </label>
+            <label>
+                <span>4</span>
+                <input type="radio" name="rpe" value="4">
+            </label>
+            <label>
+                <span>5</span>
+                <input type="radio" name="rpe" value="5">
+            </label>
+            <label>
+                <span>6</span>
+                <input type="radio" name="rpe" value="6">
+            </label>
+            <label>
+                <span>7</span>
+                <input type="radio" name="rpe" value="7">
+            </label>
+            <label>
+                <span>8</span>
+                <input type="radio" name="rpe" value="8">
+            </label>
+            <label>
+                <span>9</span>
+                <input type="radio" name="rpe" value="9">
+            </label>
+            <label>
+                <span>10</span>
+                <input type="radio" name="rpe" value="10">
+            </label>
+        </div>
+        <input type="submit" value="Zatwierdź">
+    </form>
 </div>
 
 </body>
